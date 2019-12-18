@@ -1,0 +1,46 @@
+<html>
+<title>SAMPLE</title>
+
+<style>
+    .content {
+        display: flex;
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .block {
+        display: flex;
+        flex: 1 1 0;
+        padding: 1em;
+        justify-content: center;
+    }
+</style>
+
+<script>
+    function hide() {
+        let block = document.getElementById('block3')
+        block.style = 'display:none'
+    }
+
+    function red() {
+        let block = document.getElementById('block1')
+        block.style = 'background-color:red'
+    }
+
+    function changeText() {
+        let block = document.getElementById('block2')
+        block.innerText = "Вы нажали на вторую колонку"
+    }
+</script>
+
+<body>
+    <div class="content">
+        <div class="block" id="block1" onclick="red()">Первая колонка с текстом</div>
+        <div class="block" id="block2" onclick="changeText()">Вторая колонка с текстом</div>
+        <div class="block" id="block3">
+            <button onclick="hide()">Кнопка</button>
+        </div>
+    </div>
+</body>
+
+</html>
