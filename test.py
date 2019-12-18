@@ -5,6 +5,11 @@ from selenium import webdriver
 
 # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
 driver = webdriver.Chrome()
+driver.maximize_window()
+resolution = driver.get_window_size()
+half_width = resolution['width'] // 2
+height = resolution['height'] 
+driver.set_window_size(half_width, height)
 
 # команда time.sleep устанавливает паузу в 5 секунд, чтобы мы успели увидеть, что происходит в браузере
 time.sleep(2)
